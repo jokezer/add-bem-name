@@ -32,7 +32,7 @@ const AwesomeElement = ({ active }) => (
 After:
 
 ```js
-import addBemName from 'bem-name';
+import addBemName from 'add-bem-name';
 import classnames from 'classnames'
 
 const bemName = addBemName('long-name-of-the-element');
@@ -51,6 +51,12 @@ const AwesomeElement = ({ active }) => (
 );
 ```
 
+# Installation
+
+You can add it to your project with yarn or npm:
+`yarn add add-bem-name`
+`npm i add-bem-name --save`
+
 # How to use it
 
 At first you register a block name:
@@ -63,7 +69,7 @@ This function takes a string with block name and returns a function you can use 
 - `bemName('element-name', 'active')` returns a element name with modificator: `'block-name__element-name--active'`
 - `bemName(null, 'active')` returns a block name with modificator: `'block-name--active'`
 
-# Use modificators
+# Modificators
 
 As you could see above, Each function call returns only one specified class. You can easily combine modificators with [classnames](https://github.com/JedWatson/classnames) util:
 
