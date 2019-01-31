@@ -64,19 +64,19 @@ At first you register a block name:
 const bemName = addBemName('block-name');
 ```
 This function takes a string with block name and returns a function you can use in four different ways:
-- `bemName()` returns a block (*or component in BEM-methodology*) name
+- `bemName()` returns a component (*or block in BEM-methodology*) name
 - `bemName('element-name')` returns a element name like `'block-name__element-name'`
 - `bemName('element-name', 'active')` returns a element name with modificator: `'block-name__element-name--active'`
 - `bemName(null, 'active')` returns a block name with modificator: `'block-name--active'`
 
 # Modificators
 
-As you could see above, Each function call returns only one specified class. You can easily combine modificators with [classnames](https://github.com/JedWatson/classnames) util:
+As you could see above, each function call returns only one specified class. You can easily combine modificators with [classnames](https://github.com/JedWatson/classnames) util:
 
 ```js
 classnames(bemName('item'), {
-  [bemName('item', active)]: active,
-  [bemName('item', red)]: red,
+  [bemName('item', 'active')]: active,
+  [bemName('item', 'red')]: red,
 });
 ```
 
